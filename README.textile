@@ -53,7 +53,6 @@ Time::nth_wday could probably use some explanation.  Time::nth_wday will find th
 
 *Enjoy!*
 
-(We use these extensions at nFrame to decide the order of the 'on-call' list at
-any given time.  Also, I feel required to tell that, honestly, the environment
+_(I feel required to tell that, honestly, the environment
 at nFrame is far removed from the usual negative implications of Enterprise.
-It's quite nice, actually.  Oh, and we only have like 40 total employees.)
+It's quite nice, actually.  Oh, and we only have like 40 total employees.)_
