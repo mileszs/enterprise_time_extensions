@@ -17,7 +17,7 @@ h2. Un-Fun, All-Business Instance Method Examples
 </pre>
 
 There are question mark methods for the holidays that are paid-time-off for
-slaves of The Enterprise. 
+slaves of The Enterprise.
   * new_years_day?
   * mlk_jr_day?
   * memorial_day?
@@ -53,6 +53,6 @@ Time::nth_wday could probably use some explanation.  Time::nth_wday will find th
 
 *Enjoy!*
 
-_(I feel required to tell that, honestly, the environment
+<em>(I feel required to tell that, honestly, the environment
 at nFrame is far removed from the usual negative implications of Enterprise.
-It's quite nice, actually.  Oh, and we only have like 40 total employees.)_
+It's quite nice, actually.  Oh, and we only have like 40 total employees.)</em>
