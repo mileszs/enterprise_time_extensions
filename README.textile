@@ -1,0 +1,59 @@
+h1. Enterprise Time Extensions
+
+Enterprisey extensions to Ruby's Time class.  How else will you know when it's
+OK to stop avoiding work, and you can actually leave work?
+
+Example:
+
+h2. Un-Fun, All-Business Instance Method Examples
+
+<pre>
+  <code>
+    t = Time.now #=> Fri Jan 09 22:12:31 0100 2009
+    # Enterprisey methods in action!:
+    t.after_hours? #=> false
+    t.holiday? #=> false
+  </code>
+</pre>
+
+There are question mark methods for the holidays that are paid-time-off for
+slaves of The Enterprise. 
+  * new_years_day?
+  * mlk_jr_day?
+  * memorial_day?
+  * independence_day?
+  * labor_day?
+  * thanksgiving?
+  * christmas_day?
+
+If you need/want more, let me know!  You're welcome
+to do it yourself, if you wish.
+
+h2. Frank, Straight-Shooting Class Methods
+
+A couple useful class methods are added as well:
+
+<pre>
+  <code>
+  # Countdown to the next football game?
+  Time.next_sunday #=> Sun Jan 11 00:00:00 0100 2009
+  # The big one:
+  Time.nth_wday(3, 6, 7, 2009) #=> Sat Jul 18 00:00:00 0200 2009
+  </code>
+</pre>
+
+Time::nth_wday could probably use some explanation.  Time::nth_wday will find the 'nth' week day of a month.  Above, we found the 3th (hehe) Saturday of July 2009.  This is actually used often in the various holiday methods from above.  For instance, Thanksgiving is on the 4th Thursday of November.  The method looks like this:
+<pre>
+  <code>
+  def self.nth_wday(n, wday, month, year)
+  # ...
+  end
+  </code>
+</pre>
+
+*Enjoy!*
+
+(We use these extensions at nFrame to decide the order of the 'on-call' list at
+any given time.  Also, I feel required to tell that, honestly, the environment
+at nFrame is far removed from the usual negative implications of Enterprise.
+It's quite nice, actually.  Oh, and we only have like 40 total employees.)
