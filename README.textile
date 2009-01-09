@@ -13,25 +13,32 @@ h2. Un-Fun, All-Business Instance Method Examples
     # Enterprisey methods in action!:
     t.after_hours? #=> false
     t.holiday? #=> false
+
+    t = Time.local(2009, 12, 25) #=>  Fri Dec 25 00:00:00 0100 2009
+    t.after_hours? #=> true -- because it's a holiday
+    t.holiday? #=> true -- I told you!
+
+    t = Time.local(2009, 1, 9, 18, 30) #=> Fri Jan 09 18:30:00 0100 2009
+    t.after_hours? #=> true -- Business hours are 8AM to 6PM ... SHARP!
+    t.holiday? #=> false
   </code>
 </pre>
 
 There are question mark methods for the holidays that are paid-time-off for
 slaves of The Enterprise.
-  * new_years_day?
-  * mlk_jr_day?
-  * memorial_day?
-  * independence_day?
-  * labor_day?
-  * thanksgiving?
-  * christmas_day?
 
-If you need/want more, let me know!  You're welcome
-to do it yourself, if you wish.
+* new_years_day?
+* mlk_jr_day?
+* memorial_day?
+* independence_day?
+* labor_day?
+* thanksgiving?
+* christmas_day?
+
+<em>If you need/want more, let me know!  You're welcome
+to do it yourself, if you wish.</em>
 
 h2. Frank, Straight-Shooting Class Methods
-
-A couple useful class methods are added as well:
 
 <pre>
   <code>
@@ -53,6 +60,6 @@ Time::nth_wday could probably use some explanation.  Time::nth_wday will find th
 
 *Enjoy!*
 
-<em>(I feel required to tell that, honestly, the environment
-at nFrame is far removed from the usual negative implications of Enterprise.
+<em>(I feel obligated to tell you, honestly, that the environment at nFrame is
+far removed from the usual negative implications of the word 'Enterprise'.
 It's quite nice, actually.  Oh, and we only have like 40 total employees.)</em>
