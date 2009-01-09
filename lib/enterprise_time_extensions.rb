@@ -34,7 +34,7 @@ module EnterpriseTimeExtensions
   def after_hours?
     result = true
     # M-F, 8am to 6pm are business hours
-    if (1..5).include?(self.wday) && (8..18).include?(self.hour)
+    if (1..5).include?(self.wday) && (8..17).include?(self.hour)
       result = false
     end
     # unless it's a holiday!

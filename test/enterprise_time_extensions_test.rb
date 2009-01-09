@@ -43,8 +43,13 @@ class EnterpriseTimeExtensionsTest < Test::Unit::TestCase
   context "A Time instance" do
 
     context "on :after_hours?" do
-      should "be true if not a weekday between 8AM and 6PM" do
-        time = Time.local(2009, 1, 6, 23)
+      should "be true if not a weekday" do
+        time = Time.local(2009, 1, 10, 12)
+        assert time.after_hours?
+      end
+
+      should "be true if it's not between 8AM and 6PM" do
+        time = Time.local(2009, 1, 9, 18, 30)
         assert time.after_hours?
       end
 
