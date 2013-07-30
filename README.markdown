@@ -1,14 +1,13 @@
-h1. Enterprise Time Extensions
+# Enterprise Time Extensions
 
 Enterprisey extensions to Ruby's Time class.  How else will you know when it's
 OK to stop avoiding work, and you can actually leave work?
 
 Example:
 
-h2. Un-Fun, All-Business Instance Method Examples
+## Un-Fun, All-Business Instance Method Examples
 
-<pre>
-  <code>
+```
     t = Time.now #=> Fri Jan 09 22:12:31 0100 2009
     # Enterprisey methods in action!:
     t.after_hours? #=> false
@@ -21,8 +20,7 @@ h2. Un-Fun, All-Business Instance Method Examples
     t = Time.local(2009, 1, 9, 18, 30) #=> Fri Jan 09 18:30:00 0100 2009
     t.after_hours? #=> true -- Business hours are 8AM to 6PM ... SHARP!
     t.holiday? #=> false
-  </code>
-</pre>
+```
 
 There are question mark methods for the holidays that are paid-time-off for
 slaves of The Enterprise.
@@ -35,27 +33,24 @@ slaves of The Enterprise.
 * thanksgiving?
 * christmas_day?
 
-<em>If you need/want more, let me know!  You're welcome
-to do it yourself, if you wish.</em>
+_If you need/want more, let me know!  You're welcome
+to do it yourself, if you wish._
 
-h2. Frank, Straight-Shooting Class Methods
+## Frank, Straight-Shooting Class Methods
 
-<pre>
-  <code>
+```
   # Countdown to the next football game?
   Time.next_sunday #=> Sun Jan 11 00:00:00 0100 2009
   # The big one:
   Time.nth_wday(3, 6, 7, 2009) #=> Sat Jul 18 00:00:00 0200 2009
-  </code>
-</pre>
+```
 
 Time::nth_wday could probably use some explanation.  Time::nth_wday will find the 'nth' week day of a month.  Above, we found the 3th (hehe) Saturday of July 2009.  This is actually used often in the various holiday methods from above.  For instance, Thanksgiving is on the 4th Thursday of November.  The method looks like this:
-<pre>
-  <code>
+
+```
   def self.nth_wday(n, wday, month, year)
     # ...
   end
-  </code>
-</pre>
+```
 
 *Enjoy!*
