@@ -7,7 +7,7 @@ Example:
 
 ## Un-Fun, All-Business Instance Method Examples
 
-```
+```ruby
     t = Time.now #=> Fri Jan 09 22:12:31 0100 2009
     # Enterprisey methods in action!:
     t.after_hours? #=> false
@@ -38,7 +38,7 @@ to do it yourself, if you wish._
 
 ## Frank, Straight-Shooting Class Methods
 
-```
+```ruby
   # Countdown to the next football game?
   Time.next_sunday #=> Sun Jan 11 00:00:00 0100 2009
   # The big one:
@@ -47,7 +47,7 @@ to do it yourself, if you wish._
 
 Time::nth_wday could probably use some explanation.  Time::nth_wday will find the 'nth' week day of a month.  Above, we found the 3th (hehe) Saturday of July 2009.  This is actually used often in the various holiday methods from above.  For instance, Thanksgiving is on the 4th Thursday of November.  The method looks like this:
 
-```
+```ruby
   def self.nth_wday(n, wday, month, year)
     # ...
   end
