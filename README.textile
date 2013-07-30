@@ -53,13 +53,9 @@ Time::nth_wday could probably use some explanation.  Time::nth_wday will find th
 <pre>
   <code>
   def self.nth_wday(n, wday, month, year)
-  # ...
+    # ...
   end
   </code>
 </pre>
 
 *Enjoy!*
-
-<em>(I feel obligated to tell you, honestly, that the environment at nFrame is
-far removed from the usual negative implications of the word 'Enterprise'.
-It's quite nice, actually.  Oh, and we only have like 40 total employees.)</em>
